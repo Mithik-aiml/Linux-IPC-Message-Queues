@@ -1,5 +1,3 @@
-//
-// msqueue.c - Combined Writer/Reader for System V Message Queue
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,7 +18,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    key = ftok("progfile", 65);
+    key = ftok("msgq", 65);
     if (key == -1) {
         perror("ftok");
         return 1;
@@ -56,4 +54,5 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
 
